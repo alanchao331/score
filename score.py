@@ -9,7 +9,21 @@ Original file is located at
 
 score = input().split()
 countF = 0
+max = score[0]
+min = score[0]
+sum = 0
+
 for i in score:
   if int(i) < 60:
     countF += 1
+  sum += int(i)
+
+  if int(i) > int(max):
+    max = i
+  if int (i) < int(min):
+    min = i
+
+avg = sum // len(score)
 print(countF)
+print(avg)
+print(max, min)
